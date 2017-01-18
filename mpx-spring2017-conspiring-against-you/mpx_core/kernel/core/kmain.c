@@ -38,6 +38,15 @@ void kmain(void)
    
    // 2) Descriptor Tables
    klogv("Initializing descriptor tables...");
+   // Initializes the Global Descriptor Table and the Interrupt Descriptor Table
+   init_gdt();
+   init_idt();
+   
+   // 3) Initalize Interrupts
+   klogv("Initalizing interrupt controller and IRQs...");
+   init_pic();
+   init_irq();
+   sti();
 
    // 4) Virtual Memory
    klogv("Initializing virtual memory...");

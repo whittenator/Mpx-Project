@@ -11,8 +11,8 @@
 #define asm __asm__
 #define volatile __volatile__
 
-#define sti()  asm volatile ("sti"::)  //turn irqs off
-#define cli()  asm volatile ("cli"::)  //turn irqs on
+#define sti()  asm volatile ("sti"::)  //turn irqs on
+#define cli()  asm volatile ("cli"::)  //turn irqs off
 #define nop()  asm volatile ("nop"::)  //skip cycle
 #define hlt()  asm volatile ("hlt"::)  //halt
 #define iret() asm volatile ("iret"::) //interrupt return
